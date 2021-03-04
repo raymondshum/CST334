@@ -40,11 +40,14 @@ while [ $response != "No" ]; do
     read response
 done
 
-while [ $response != "No"]; do
+response="Yes"
+pi=3.14
+
+while [ $response != "No" ]; do
     echo "Enter the radius of the circle: "
     read radius
 
-    area=$(expr $radius \* $radius \* 3.14)
+    area=$(expr "$pi * $radius * $radius" | bc)
 
     echo "The area of the circle is $area"
     echo "Would you like to repeat for another circle [Yes/No]?"
