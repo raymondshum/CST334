@@ -8,3 +8,6 @@ These projects are the primary deliverables associated with the CSUMB's Spring 2
 
 ### Module 1:
 For this exercise, we focused on learning the fundamentals of navigating a Linux shell and implemented our knowledge through the creation of a simple bash script. The script performs simple user verification by checking the currently logged in user against a pre-declared eligible user. If the user is allowed to procede, they are asked to input three integer values. These integer values are used to calculate the areas of a rectangle and circle, respectively. The calculated values are echoed back to the user.
+
+### Module 2:
+This assignment focuses on demonstrating knowledge of C programming in a Linux environment. The aim of the lab was to develop knowledge for implementing programs with two or more processes using the following system calls: fork(), exit(), wait(), and exec(). This lab request that we observe and manipulate parent and child processes, noting our observations.
