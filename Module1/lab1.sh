@@ -1,13 +1,16 @@
 #!/bin/bash
 
-#########################################
-# NAME: Raymond Shum                    #
-# CLASS: CST 334                        #
-# PROFESSOR: Geri Lamble                #
-# TEACHING ASSISTANT: Ibrahim Jabarkhel #
-# ASSIGNMENT: Lab 1                     #
-# DUE DATE: March 9, 2021               #
-#########################################
+####################################################################
+# Name: Raymond Shum                                               #
+# Date: March 9, 2021                                              #
+# Title: Lab 1 – Unix/Linux Commands and Basic Shell Programming   #
+# Description: This script performs simple user verification by    #
+# checking the currently logged in user against a pre-declared     #
+# eligible user. If the user is allowed to procede, they are asked #
+# to input three integer values. These integer values are used to  #
+# calculate the areas of a rectangle and circle, respectively. The #
+# calculated values are echoed back to the user.                   # 
+####################################################################
 
 echo Executing $0
 echo $(/bin/ls | wc -l) files
