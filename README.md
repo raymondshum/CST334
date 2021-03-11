@@ -3,22 +3,22 @@ Students in this course will learn about the use and design of modern operating 
 
 ## Contents
 
-[Lab Descriptions](##-Lab-Descriptions)
+[Lab Descriptions](#lab-descriptions)
 
-[Module 1](###-Module-1)
+[Module 1](#module-1)
 
-[Module 2](###Module-2)
+[Module 2](#module-2)
 
 
 ## Lab Descriptions
 These projects are the primary deliverables associated with the CSUMB's Spring 2021 section of CST 334. They are assigned 1 per week (as modules) and meant to be the practical demonstration of the core competencies of that week's course materials.
 
-[Return to Top](##-Contents)
+[Return to Top](#contents)
 
 ### Module 1
 For this exercise, we focused on learning the fundamentals of navigating a Linux shell and implemented our knowledge through the creation of a simple bash script. The script performs simple user verification by checking the currently logged in user against a pre-declared eligible user. If the user is allowed to procede, they are asked to input three integer values. These integer values are used to calculate the areas of a rectangle and circle, respectively. The calculated values are echoed back to the user.
 
-[Return to Top](##-Contents)
+[Return to Top](#contents)
 
 ### Module 2
 This assignment focuses on demonstrating knowledge of C programming in a Linux environment. The aim of the lab was to develop knowledge for implementing programs with two or more processes using the following system calls: fork(), exit(), wait(), and exec(). 
@@ -27,4 +27,4 @@ The first program takes an argument specifying delay in milliseconds. It creates
 
 The second program also takes an argument specifying delay in milliseconds and creates a child process using fork(). This time, the child process will perform the "ls" UNIX command using execlp(). The parent process will wait() until the child finishes, printing results to screen. We also note our observations regarding the determinism of this program.
 
-[Return to Top](##-Contents)
+[Return to Top](#contents)
