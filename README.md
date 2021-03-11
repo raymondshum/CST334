@@ -7,13 +7,13 @@ Students in this course will learn about the use and design of modern operating 
 
 [Module 1](###-Module-1)
 
-[Module 2](###-Module-2)
+[Module 2](###Module-2)
 
 
 ## Lab Descriptions
 These projects are the primary deliverables associated with the CSUMB's Spring 2021 section of CST 334. They are assigned 1 per week (as modules) and meant to be the practical demonstration of the core competencies of that week's course materials.
 
-[Return to Top](##Contents)
+[Return to Top](##-Contents)
 
 ### Module 1
 For this exercise, we focused on learning the fundamentals of navigating a Linux shell and implemented our knowledge through the creation of a simple bash script. The script performs simple user verification by checking the currently logged in user against a pre-declared eligible user. If the user is allowed to procede, they are asked to input three integer values. These integer values are used to calculate the areas of a rectangle and circle, respectively. The calculated values are echoed back to the user.
