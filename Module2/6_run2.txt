@@ -1,0 +1,14 @@
+
+*** Run 1 - Program 4_lab2_2 - 3000ms DELAY ***
+
+1_lab2_1
+1_lab2_1.c
+3_run1.txt
+4_lab2_2
+4_lab2_2.c
+6_run2.txt
+Makefile
+run.sh
+
+ Before forking.
+Child Complete
