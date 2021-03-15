@@ -9,6 +9,7 @@ Description taken from student course catalog. Students in this course will lear
 
 [Module 2](#module-2)
 
+[Module 3](#module-3)
 
 ## Lab Descriptions
 These projects are the primary deliverables associated with the CSUMB's Spring 2021 section of CST 334. They are assigned 1 per week (as modules) and meant to be the practical demonstration of the core competencies of that week's course materials.
@@ -26,5 +27,17 @@ This assignment focuses on demonstrating knowledge of C programming in a Linux e
 The first program takes an argument specifying delay in milliseconds. It creates a child process using fork(). Both the parent and child process iterate from 0 to 99, printing the results. The lab has us note our observations regarding the interaction between delay, parent and child processes.
 
 The second program also takes an argument specifying delay in milliseconds and creates a child process using fork(). This time, the child process will perform the "ls" UNIX command using execlp(). The parent process will wait() until the child finishes, printing results to screen. We also note our observations regarding the determinism of this program.
+
+[Return to Top](#contents)
+
+### Module 3
+
+This project was executed in 3 phases.
+
+Program 1: Implements the Linux shell command: "ls | more". The program creates two child processes. The first child executes the "more" command downstream of the pipe and the second child executes "ls" upstream of the pipe. Both children close their ends of the pipe. The parent process closes both ends of the pipe and waits for both children to finish.
+
+(Need confirmation) Program 2: A command line argument is passed through the argv[] of main(). The parent process creates two children. The first child (upstream of the pipe) writes the number of arguments passed and the contents of the arguments. The second child (downstream of the pipe) reads the arguments from stdin and writes the contents.
+
+Program 3: This program implements the command "cat /etc/passwd | grep root" in the style of Program 1.
 
 [Return to Top](#contents)
