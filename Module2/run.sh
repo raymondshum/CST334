@@ -13,9 +13,6 @@ touch 3_run1.txt
 
 # Run program 1 with 0, 3000, 500, 5000 microsecond delays. Redirects 
 # stdout to text file.
-echo -e "\n*** RUN 1 - PROGRAM: 1_lab2_1 - 0ms DELAY ***\n" > 3_run1.txt
-./1_lab2_1 0 >> 3_run1.txt
-
 echo -e "\n*** RUN 1 - PROGRAM: 1_lab2_1 - 3000ms DELAY ***\n" > 3_run1.txt
 ./1_lab2_1 3000 >> 3_run1.txt
 
