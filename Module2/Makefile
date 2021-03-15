@@ -1,3 +1,11 @@
+# ########################################################
+# NAME: Raymond Shum                                     #    
+# DATE: March 16, 2021                                   #    
+# TITLE: Lab 3 - Part 2 & 5 - Makefile                   #    
+# DESCRIPTION: This is the Makefile for both programs in #     
+# Lab 3.                                                 #
+# ########################################################
+
 CC = g++
 
 CFLAGS = -D DEBUG
