@@ -26,5 +26,5 @@ echo -e "\n*** RUN 3 - PROGRAM: 1_lab2_1 - 5000ms DELAY ***\n" >> 3_run1.txt
 ./1_lab2_1 5000 >> 3_run1.txt
 
 # Runs program 2, outputting to console
-echo -e "\n*** Run 1 - Program 4_lab2_2 - 3000ms DELAY ***\n" > 6_run2.txt
+echo -e "\n*** Run 1 - Program 4_lab2_2 - 3000ms DELAY ***\n"
 ./4_lab2_2 3000

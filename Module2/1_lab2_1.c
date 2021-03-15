@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
     if(argc != 2)
     {
         //Microsecond delay is set to 0 if no argument is passed.
-        printf("Error: No value for milisecond delay has been passed as a command-line argument.");
-        printf(" Defaulting to a value of 0.");
+        printf("\nError: No value for milisecond delay has been passed as a command-line argument.");
+        printf(" Defaulting to a value of 0.\n");
         n = 0;
     }
     else
@@ -48,8 +48,7 @@ int main(int argc, char *argv[])
         // Parent process
         for (i = 0; i < 100; i++)
         {
-            //printf("\t \t \t Parent Process %d \n", i);
-            printf("Parent process %d\n", i);
+            printf("\t \t \t Parent Process %d \n", i);
             usleep(n);
         }
     }
