@@ -1,4 +1,16 @@
-/*Sample C program for Lab assignment 3*/
+/*
+* NAME: Raymond Shum
+* DATE: March 16, 2021
+* TITLE: Lab 3 - Part 4 - C Program with pipe IPC
+* DESCRIPTION: This program also creates two child
+* processes: a reader downstream of the pipe and
+* a writer upstream of the pipe. The writer takes
+* the arguments passed through argv and writes it
+* to its end of the pipe. The reader reads the 
+* output from its end of the pipe and prints it
+* to the terminal.
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>

@@ -1,3 +1,15 @@
+/*
+* NAME: Raymond Shum
+* DATE: March 16, 2021
+* TITLE: Lab 3 - Part 7 - C Program with pipe IPC
+* DESCRIPTION: This program implements the command:
+* cat /etc/passwd | grep "root". The second child
+* process writes the contents of the cat command
+* into its end of the pipe and the first child
+* reads these contents as input. It then feeds the
+* input into the grep command.
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
