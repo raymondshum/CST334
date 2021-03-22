@@ -7,3 +7,4 @@ Module1/test.exe
 Module1/test.c
 cst334workspace.code-workspace
 *.o
+*.exe
