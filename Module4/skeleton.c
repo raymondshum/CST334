@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
+#include "queue.c"
+#include "node.c"
 
 typedef struct {//to 
     int pageno;
@@ -19,13 +20,13 @@ int main(int argc, char *argv[]){
     int i;
     int totalFaults = 0; // keeps track of the total page faults
     
-    for (i = 0; i < CACHE_SIZE; i++){//initialise cache array  
+    for (i = 0; i < C_SIZE; i++){//initialise cache array  
          cache[i].pageno = -1;
     }
 
     while (fgets(pageCache, 100, stdin)){
     	int page_num = atoi(pageCache); //Stores number read from file as int
-
+        printf("%d\n", page_num);
     	/*
 
 		
@@ -35,7 +36,7 @@ int main(int argc, char *argv[]){
     	*/
     }
 
-    printf("%d Total Page Faults", faultno);
+    printf("%d Total Page Faults", totalFaults);
     return 0;
 
 }
