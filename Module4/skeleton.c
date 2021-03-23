@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     int i;
     int totalFaults = 0; // keeps track of the total page faults
     int queueSize = 0;  // keeps track of queue size to avoid calling queue_length in a loop
+    int hit = 0;
 
     for (i = 0; i < C_SIZE; i++)
     { //initialise cache array
@@ -59,10 +60,18 @@ int main(int argc, char *argv[])
             enqueue(pageQueue, page_num);
             totalFaults++;
         }
+        else
+        {
+            hit++;
+        }
     }
 
+    double percentFault = ((double)totalFaults/((double)totalFaults+(double)hit)*100);
+    printf("%d Total hits\n", hit);
     printf("%d Total Page Faults", totalFaults);
+    printf("\n%.2f%% Fault Rate", percentFault);
     printf("\nQueue Size: %d", queue_length(pageQueue));
+    
     queue_destroy(pageQueue);
     destroyNode(pageResult);
     return 0;
