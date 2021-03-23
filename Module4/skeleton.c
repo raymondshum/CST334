@@ -12,13 +12,10 @@ typedef struct
     int pageno;
 } ref_page;
 
-struct queue *pageQueue;    // FIFO page queue
-struct node *pageResult;    // Holds node if pageNumber is found in PageQueue and NULL if not
-
 int main(int argc, char *argv[])
 {
-    pageQueue = queue_create();
-    pageResult = NULL;
+    struct queue *pageQueue = queue_create(); // FIFO page queue
+    struct node *pageResult = NULL;           // Holds node if pageNumber is found in PageQueue and NULL if not
 
     int C_SIZE = atoi(argv[1]); // Size of Cache passed by user
     ref_page cache[C_SIZE];     // Cache that stores pages
@@ -26,8 +23,8 @@ int main(int argc, char *argv[])
 
     int i;
     int totalFaults = 0; // keeps track of the total page faults
-    int queueSize = 0;  // keeps track of queue size to avoid calling queue_length in a loop
-    int hit = 0;
+    int queueSize = 0;   // keeps track of queue size to avoid calling queue_length in a loop
+    int hit = 0;         // keeps track of hits for end of run statistics
 
     for (i = 0; i < C_SIZE; i++)
     { //initialise cache array
@@ -66,13 +63,16 @@ int main(int argc, char *argv[])
         }
     }
 
+    // End of run statistics
     double percentFault = ((double)totalFaults/((double)totalFaults+(double)hit)*100);
     printf("%d Total hits\n", hit);
     printf("%d Total Page Faults", totalFaults);
     printf("\n%.2f%% Fault Rate", percentFault);
     printf("\nQueue Size: %d", queue_length(pageQueue));
-    
+
+    // Free memory for queue and node
     queue_destroy(pageQueue);
     destroyNode(pageResult);
+
     return 0;
 }
