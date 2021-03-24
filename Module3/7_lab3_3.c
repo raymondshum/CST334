@@ -1,6 +1,6 @@
 /*
 * NAME: Raymond Shum
-* DATE: March 16, 2021
+* DATE: March 23, 2021
 * TITLE: Lab 3 - Part 7 - C Program with pipe IPC
 * DESCRIPTION: This program implements the command:
 * cat /etc/passwd | grep "root". The second child
