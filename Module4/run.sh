@@ -10,14 +10,19 @@
 # times and outputs the results to fifo.txt.                       #
 ####################################################################
 
+
+# Remake objects
 make clean
 make
 
+# Output test run results
 ./queue_test.o > 3_testrun.txt
 
+# Remake FIFO results
 rm fifo.txt
 touch fifo.txt
 
+# Run fifo in increments of 100 from 100 to 1500, inclusive
 for i in {1..15}
 do
     cache=$(expr $i \* 100)
