@@ -1,5 +1,17 @@
-// CST 334 Lab 4 – FIFO Page Replacement Simulation File I/O Template
-
+/**
+* NAME: Raymond Shum
+* DATE: March 30, 2021
+* TITLE: Lab 4 - Part 1 - FIFO Page Replacement Program
+* DESCRIPTION: This program simulates the FIFO page replacement
+* algorithm, using a linked list as a cache. It takes a command
+* line argument that determines the size of the cache. It uses
+* accesses.txt as a source of input that determines the order in
+* which pages are being accessed. Each integer in accesses.txt
+* represents a page number, which is checked against the linked
+* list (pageQueue). If the integer is not present, a miss counter
+* is incremented and the FIFO page replacement algorithm is
+* executed. If it is a hit, the hit counter is incremented.
+**/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

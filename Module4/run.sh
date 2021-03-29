@@ -1,5 +1,15 @@
 #!/bin/bash
 
+####################################################################
+# Name: Raymond Shum                                               #
+# Date: March 30, 2021                                             # 
+# Title: Lab 4 - FIFO Page Replacement                             #
+# Description: This script makes the fifo and queue_test objects.  #
+# It outputs the results of the test run verification (part 3) to  #
+# 3_testrun.txt. It then runs the FIFO page replacement program 15 #
+# times and outputs the results to fifo.txt.                       #
+####################################################################
+
 make clean
 make
 
