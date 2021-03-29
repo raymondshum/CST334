@@ -1,4 +1,4 @@
-/**
+/*
 * NAME: Raymond Shum
 * DATE: March 30, 2021
 * TITLE: Lab 4 - Part 1 - FIFO Page Replacement Program
@@ -11,7 +11,8 @@
 * list (pageQueue). If the integer is not present, a miss counter
 * is incremented and the FIFO page replacement algorithm is
 * executed. If it is a hit, the hit counter is incremented.
-**/
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

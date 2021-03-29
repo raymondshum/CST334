@@ -1,0 +1,90 @@
+****** Cache size: 100 ******
+982 Total hits
+9019 Total Page Faults
+90.18% Fault Rate
+Queue Size: 100
+
+****** Cache size: 200 ******
+1959 Total hits
+8042 Total Page Faults
+80.41% Fault Rate
+Queue Size: 200
+
+****** Cache size: 300 ******
+2949 Total hits
+7052 Total Page Faults
+70.51% Fault Rate
+Queue Size: 300
+
+****** Cache size: 400 ******
+3897 Total hits
+6104 Total Page Faults
+61.03% Fault Rate
+Queue Size: 400
+
+****** Cache size: 500 ******
+4870 Total hits
+5131 Total Page Faults
+51.30% Fault Rate
+Queue Size: 500
+
+****** Cache size: 600 ******
+5793 Total hits
+4208 Total Page Faults
+42.08% Fault Rate
+Queue Size: 600
+
+****** Cache size: 700 ******
+6699 Total hits
+3302 Total Page Faults
+33.02% Fault Rate
+Queue Size: 700
+
+****** Cache size: 800 ******
+7504 Total hits
+2497 Total Page Faults
+24.97% Fault Rate
+Queue Size: 800
+
+****** Cache size: 900 ******
+8329 Total hits
+1672 Total Page Faults
+16.72% Fault Rate
+Queue Size: 900
+
+****** Cache size: 1000 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
+****** Cache size: 1100 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
+****** Cache size: 1200 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
+****** Cache size: 1300 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
+****** Cache size: 1400 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
+****** Cache size: 1500 ******
+9002 Total hits
+999 Total Page Faults
+9.99% Fault Rate
+Queue Size: 999
+
