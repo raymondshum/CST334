@@ -1,8 +1,8 @@
 //# 334 Su 20 Lab 4 queue tester
 
 #include <stdio.h>
-#include "queue.c"
-#include "node.c"
+#include "queue.h"
+#include "node.h"
 
 struct queue *q;
 
