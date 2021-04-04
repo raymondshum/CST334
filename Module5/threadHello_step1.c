@@ -9,14 +9,16 @@ pthread_t threads[NTHREADS];
 int main()
 {
     int i;
+    int *array[NTHREADS];
 
 
     for (i = 0; i < NTHREADS; i++)
     {
         int *tempPtr = (int *) malloc(sizeof(int));
         *tempPtr = i;
+        array[i] = tempPtr;
 
-        pthread_create(&threads[i], NULL, go, tempPtr);
+        pthread_create(&threads[i], NULL, go, array[i]);
     }
 
     for (i = 0; i < NTHREADS; i++)
@@ -24,6 +26,11 @@ int main()
         printf("Thread %d returned\n", i);
         pthread_join(threads[i], NULL);
     }
+
+     for (i = 0; i < NTHREADS; i++)
+     {
+         free(array[i]);
+     }
 
     printf("Main thread done.\n");
     return 0;
