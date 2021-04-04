@@ -3,22 +3,28 @@
 #include <pthread.h>
 #include <time.h>
 
+// dimensions used by matrixes
 #define N 3
 #define M 3
 #define L 3
 
-double matrixA[N][M];
+// declare matrixes as global variables
+// matrixA * matrixB = matrixC
+double matrixA[N][M]; 
 double matrixB[M][L];
 double matrixC[N][L];
 
+// # threads equals number rows of matrixA
 pthread_t threads[N];
 
-void *matrixMult(void *arg);
+// prototype of the thread multiplication function
+void *matrixMult(void *arg); 
 
 int main()
 {
     srand(time(NULL));
 
+    // seed matrixA with random numbers between 0-10 and print
     printf("Matrix A:\n");
     for (int i = 0; i < N; i++)
     {
@@ -30,6 +36,7 @@ int main()
         printf("\n");
     }
 
+    // seed matrixB with random numbers between 0-10 and print
     printf("\nMatrix B:\n");
     for (int i = 0; i < M; i++)
     {
@@ -41,6 +48,9 @@ int main()
         printf("\n");
     }
 
+    // Create 1 thread per row of matrixA.
+    // Each thread will multiply its row of matrixA by the
+    // column of matrixB.
     for (int i = 0; i < N; i++)
     {
         int *tempPtr = (int *)malloc(sizeof(int));
@@ -49,12 +59,13 @@ int main()
         
     }
 
+    // Wait for all threads to return.
     for (int i = 0; i < N; i++)
     {
-        printf("Thread %d returned\n", i);
         pthread_join(threads[i], NULL);
     }
 
+    // Display the results of matrixC
     printf("\nMatrix C:\n");
     for (int i = 0; i < N; i++)
     {
@@ -68,9 +79,10 @@ int main()
     return 0;
 }
 
+// Multiplies a row of matrixA with a column of matrixB and assigns the results to
+// the corresponding cell in matrixC
 void *matrixMult(void *arg)
 {
-    printf("Thread %d of iter %d\n", (int)pthread_self(), *(int *)arg);
     int i = *(int *)arg;
     for (int j = 0; j < L; j++)
     {
@@ -78,9 +90,14 @@ void *matrixMult(void *arg)
         for (int k = 0; k < M; k++)
         {
             temp += matrixA[i][k] * matrixB[k][j];
-                printf("(matrixA: %.2f * matrixB: %.2f) = %.2f ",matrixA[i][k], matrixB[k][j], matrixA[i][k] * matrixB[k][j]);
+
+            printf("\n(A[%d][%d]: %.2f * B[%d][%d]: %.2f) = %.2f ",
+                i, k, matrixA[i][k], 
+                k, j, matrixB[k][j],
+                matrixA[i][k] * matrixB[k][j]);
         }
+
         matrixC[i][j] = temp;
-        printf("Total: %.2f\n",temp);
+        printf("\nC[%d][%d] = %.2f\n", i, j, temp);
     }
 }

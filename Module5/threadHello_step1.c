@@ -1,3 +1,13 @@
+/*
+* NAME: Raymond Shum
+* DATE: April 6, 2021
+* TITLE: Lab 5 - Part 1 - "Broken" Multi-threaded Program
+* DESCRIPTION: This program creates 10 threads that each
+* output their thread and (loop) iteration numbers to
+* STDOUT. The output is not as expected due to the address
+* (argument) passed to the thread creation function.
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <pthread.h>
