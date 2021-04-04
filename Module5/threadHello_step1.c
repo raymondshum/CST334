@@ -9,14 +9,15 @@ pthread_t threads[NTHREADS];
 int main()
 {
     int i;
-    int ptrArray[NTHREADS];
-    int *tempPtr;
+
 
     for (i = 0; i < NTHREADS; i++)
-        *tempPtr = (int **) malloc(sizeof(int));
+    {
+        int *tempPtr = (int *) malloc(sizeof(int));
         *tempPtr = i;
-        ptrArray[i] = *tempPtr;
-        pthread_create(&threads[i], NULL, go, &ptrArray[i]);
+
+        pthread_create(&threads[i], NULL, go, tempPtr);
+    }
 
     for (i = 0; i < NTHREADS; i++)
     {
