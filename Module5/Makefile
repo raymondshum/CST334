@@ -10,7 +10,7 @@ CC = g++
 
 CFLAGS = -D DEBUG -Wall -pthread
 
-all: threadHello_step1.o threadHelloFixed_step1_Fixed.o
+all: threadHello_step1.o threadHelloFixed_step1_Fixed.o matrix_multiplication.o
 
 threadHello_step1.o : threadHello_step1.c
 	gcc $(CFLAGS) -o threadHello_step1.o threadHello_step1.c
