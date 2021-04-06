@@ -41,7 +41,7 @@ int main()
         for (int j = 0; j < M; j++)
         {
             matrixA[i][j] = rand();
-            printf("[%d][%d] %f\t", i, j, matrixA[i][j]);
+            printf("[%d][%d] %-20f\t", i, j, matrixA[i][j]);
         }
         printf("\n");
     }
@@ -53,7 +53,7 @@ int main()
         for (int j = 0; j < L; j++)
         {
             matrixB[i][j] = rand();
-            printf("[%d][%d] %f\t", i, j, matrixB[i][j]);
+            printf("[%d][%d] %-20f\t", i, j, matrixB[i][j]);
         }
         printf("\n");
     }
@@ -97,7 +97,7 @@ void *matrixMult(void *arg)
     for (int j = 0; j < L; j++)
     {
         double temp = 0;
-        double results[3];
+
         for (int k = 0; k < M; k++)
         {
             temp += matrixA[i][k] * matrixB[k][j];
