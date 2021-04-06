@@ -1,12 +1,22 @@
+/*
+* NAME: Raymond Shum
+* DATE: April 6, 2021
+* TITLE: Lab 5 - Part 1 - Matrix Multiplication Test Driver
+* DESCRIPTION: This is the test driver for the matrix_multiplication.c
+* program. It multiplies two 3x3 matrixes (A & B) and stores the result
+* in matrixC. The output is more verbose than the matrix_multiplication
+* program and is meant to demonstrate each step of the calculations.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <time.h>
 
 // dimensions used by matrixes
-#define N 1024
-#define M 1024
-#define L 1024
+#define N 3
+#define M 3
+#define L 3
 
 // declare matrixes as global variables
 // matrixA * matrixB = matrixC
@@ -30,8 +40,8 @@ int main()
     {
         for (int j = 0; j < M; j++)
         {
-            matrixA[i][j] = rand()%10;
-            printf("A[%d][%d] = %.2f\n", i, j, matrixA[i][j]);
+            matrixA[i][j] = rand();
+            printf("[%d][%d] %f\t", i, j, matrixA[i][j]);
         }
         printf("\n");
     }
@@ -42,12 +52,12 @@ int main()
     {
         for (int j = 0; j < L; j++)
         {
-            matrixB[i][j] = rand()%10;
-            printf("B[%d][%d] = %.2f\n", i, j, matrixB[i][j]);
+            matrixB[i][j] = rand();
+            printf("[%d][%d] %f\t", i, j, matrixB[i][j]);
         }
         printf("\n");
     }
-    
+
     // Create 1 thread per row of matrixA.
     // Each thread will multiply its row of matrixA by the
     // column of matrixB.
@@ -71,7 +81,7 @@ int main()
     {
         for (int j = 0; j < L; j++)
         {
-            printf("matrixC[%d][%d]: %.2f\n", i, j, matrixC[i][j]);
+            printf("[%d][%d] %-20f\t", i, j, matrixC[i][j]);
         }
         printf("\n");
     }
@@ -87,12 +97,19 @@ void *matrixMult(void *arg)
     for (int j = 0; j < L; j++)
     {
         double temp = 0;
+        double results[3];
         for (int k = 0; k < M; k++)
         {
             temp += matrixA[i][k] * matrixB[k][j];
+            printf("\n[Thread: %d] (A[%d][%d] %.2f) * (B[%d][%d] %.2f) = %.2f",
+                (int)pthread_self(),
+                i, k, matrixA[i][k], 
+                k, j, matrixB[k][j],
+                matrixA[i][k] * matrixB[k][j]);
         }
 
         matrixC[i][j] = temp;
+        printf("\nC[%d][%d] = %.2f\n", i, j, temp);
     }
     return 0;
 }
