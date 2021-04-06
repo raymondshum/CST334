@@ -25,4 +25,4 @@ matrix_multiplication.o : matrix_multiplication.c
 	gcc $(CFLAGS) -o matrix_multiplication.o matrix_multiplication.c
 
 clean:
-	rm -f threadHello_step1.o threadHelloFixed_step1_Fixed.o matrix_multiplication.o
+	rm -f threadHello_step1.o threadHelloFixed_step1_Fixed.o matrix_multiplication.o matrix_multiplication_test.o
