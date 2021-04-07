@@ -34,7 +34,7 @@ int main()
 {
     srand(time(NULL));
 
-    // seed matrixA with random numbers between 0-10 and print
+    // seed matrixA with random numbers and print
     printf("Matrix A:\n");
     for (int i = 0; i < N; i++)
     {
@@ -46,7 +46,7 @@ int main()
         printf("\n");
     }
 
-    // seed matrixB with random numbers between 0-10 and print
+    // seed matrixB with random numbers and print
     printf("\nMatrix B:\n");
     for (int i = 0; i < M; i++)
     {

@@ -34,7 +34,7 @@ int main()
         }
     }
     printf("\n************* MATRIX B BEGIN *************\n");
-    // seed matrixB with random numbers between 0-10 and print
+    // seed matrixB with random numbers and print
     for (int i = 0; i < M; i++)
     {
         for (int j = 0; j < L; j++)
