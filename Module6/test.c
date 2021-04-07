@@ -29,9 +29,6 @@ void put(char arg);
 char get();
 
 int main(){
-
-
-
     sem_init(&empty, 0, BUFFER);
     sem_init(&full, 0, 0);
     sem_init(&mutex, 0, 1);
@@ -61,6 +58,7 @@ int main(){
     sem_destroy(&empty);
     sem_destroy(&full);
     sem_destroy(&mutex);
+
     return 0;
 }
 
@@ -75,7 +73,6 @@ void initLetter(){
 
     printf("Contents of Letter Array: ");
     printArray(letter);
-
 }
 
 void printArray(char arg[]){
@@ -102,15 +99,15 @@ void *producer(void *arg){
 
 void *consumer(void *arg){
 
-        while (position < ALPHABET) {
-            sem_wait(&full);
-            sem_wait(&mutex);
-            get();
-            sem_post(&mutex);
-            sem_post(&empty);
-        }
+    while (position < ALPHABET) {
+        sem_wait(&full);
+        sem_wait(&mutex);
+        get();
+        sem_post(&mutex);
+        sem_post(&empty);
+    }
 
-        printf("Consumer thread %d:: Ended\n", (int)pthread_self());
+    printf("Consumer thread %d:: Ended\n", (int)pthread_self());
 
     return (NULL);
 }
