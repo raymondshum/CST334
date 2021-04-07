@@ -53,9 +53,9 @@ int main()
     return 0;
 }
 
-// each thread prints both its threadID and the iteration# of the loop where it was created
+// each thread prints the address of arg, its threadID and the iteration# of the loop where it was created
 void *go(void *arg)
 {
-    printf("Hello from thread %d with iteration %d\n", (int)pthread_self(), *(int *)arg);
+    printf("[0x%X] Hello from thread %d with iteration %d\n", arg, (int)pthread_self(), *(int *)arg);
     return 0;
 }
