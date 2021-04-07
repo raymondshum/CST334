@@ -56,7 +56,11 @@ int main(){
         pthread_join(conThreads[i], NULL);
     }
 
-    printf("Program Done.\n");
+    printf("Program Completed.\n");
+
+    sem_destroy(&empty);
+    sem_destroy(&full);
+    sem_destroy(&mutex);
     return 0;
 }
 
@@ -82,39 +86,31 @@ void printArray(char arg[]){
 }
 
 void *producer(void *arg){
-    
-    printf("ProducerT: %d | Iteration: %d\n", (int)pthread_self(), *(int*)arg);
-    do {
+
+    while(position < ALPHABET) {
         sem_wait(&empty);
         sem_wait(&mutex);
-
-        printf("Produce: %c\n", letter[position]);
-        put(letter[position]);
-        position++;
-
+        put(letter[position++]);
         sem_post(&mutex);
         sem_post(&full);
-    } while(position < ALPHABET);
+    }
+
+    printf("Producer thread %d:: Ended\n", (int)pthread_self());
 
     return (NULL);
 }
 
 void *consumer(void *arg){
 
-        printf("ConsumerT: %d | Iteration: %d\n", (int)pthread_self(), *(int*)arg);
-        char sentinel = ' ';
-
-        do {
-            
+        while (position < ALPHABET) {
             sem_wait(&full);
             sem_wait(&mutex);
-
-            sentinel = get();
-            printf("Consume: %c\n", sentinel);
-
+            get();
             sem_post(&mutex);
             sem_post(&empty);
-        } while(position < ALPHABET);
+        }
+
+        printf("Consumer thread %d:: Ended\n", (int)pthread_self());
 
     return (NULL);
 }
@@ -122,10 +118,14 @@ void *consumer(void *arg){
 void put(char arg) {
     buffer[fill] = arg;
     fill = (fill + 1) % BUFFER;
+    printf("Producer thread %d:: %c >> buffer\n", 
+        (int)pthread_self(), arg);
 }
 
 char get() {
     char tmp = buffer[use];
     use = (use + 1) % BUFFER;
+    printf("Consumer thread %d:: buffer >> %c\n", 
+        (int)pthread_self(), tmp);
     return tmp;
 }
