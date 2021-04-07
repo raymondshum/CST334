@@ -24,6 +24,7 @@ int main()
 {
     srand(time(NULL));
     printf("************* MATRIX A BEGIN *************\n");
+    
     // seed matrixA with random numbers and print
     for (int i = 0; i < N; i++)
     {
@@ -33,7 +34,10 @@ int main()
             printf("MatrixA: %f, Index: %d, %d\n", matrixA[i][j], i, j);
         }
     }
+
+    printf("************* MATRIX A END *************\n");
     printf("\n************* MATRIX B BEGIN *************\n");
+
     // seed matrixB with random numbers and print
     for (int i = 0; i < M; i++)
     {
@@ -44,7 +48,10 @@ int main()
         }
         
     }
-    printf("\n************* MATRIX C BEGIN *************\n");
+
+    printf("\n************* MATRIX B END *************\n");
+
+    
     // Create 1 thread per row of matrixA.
     // Each thread will multiply its row of matrixA by the
     // column of matrixB.
@@ -62,6 +69,8 @@ int main()
         pthread_join(threads[i], NULL);
     }
 
+    printf("\n************* MATRIX C BEGIN *************\n");
+
     // Display the results of matrixC
     for (int i = 0; i < N; i++)
     {
@@ -70,6 +79,8 @@ int main()
             printf("MatrixC: %f, Index: %d, %d\n", matrixC[i][j], i, j);
         }
     }
+
+    printf("\n************* MATRIX C END *************\n");
 
     return 0;
 }
