@@ -36,6 +36,6 @@ int main()
 // I included the address of arg in the printf statement to show the cause of the error
 void *go(void *arg)
 {
-    printf("[0x%X] Hello from thread %d with iteration %d\n", arg, (int)pthread_self(), *(int *)arg);
+    printf("[0x%p] Hello from thread %d with iteration %d\n", (int *)arg, (int)pthread_self(), *(int *)arg);
     return 0;
 }
