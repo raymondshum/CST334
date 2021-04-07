@@ -1,3 +1,12 @@
+/*
+* NAME: Raymond Shum
+* DATE: April 6, 2021
+* TITLE: Lab 5 - Part 1 - Matrix Multiplication Final Program
+* DESCRIPTION: This is the final version of the matrix
+* multiplication program. It defines the sizes of N, M and L
+* as 1024.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
