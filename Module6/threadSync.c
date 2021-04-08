@@ -1,36 +1,46 @@
-/**********************************************************************************
-*  334 Su 20 Lab6 Step 1                                                          *
-*  Description: threadSync.c - simple multi-threaded program with sychronization. *
-***********************************************************************************/
+/*
+* NAME: Raymond Shum
+* DATE: March 30, 2021
+* TITLE: Lab 6 - Part 1 - C Program with semaphores
+* DESCRIPTION: This is the provided code from Lab 6,
+* which demonstrates mutual exclusion using semaphores
+* to control access to a critical section in *go().
+*/
 
 #include <stdio.h>
 #include <unistd.h>
-#include <pthread.h> 
-#include <semaphore.h> 
+#include <pthread.h>
+#include <semaphore.h>
 
 #define NTHREADS 10
 pthread_t threads[NTHREADS];
-sem_t mutex; 
+sem_t mutex;
 
-void* go(void* arg) { 
-  sem_wait(&mutex); 
-  printf("Thread %lu Entered Critical Section..\n", (size_t)arg); 
-  sleep(1); 
-  sem_post(&mutex); 
-  return (NULL);
-} 
+void *go(void *arg)
+{
+   sem_wait(&mutex);
+   printf("Thread %lu Entered Critical Section..\n", (size_t)arg);
+   sleep(1);
+   sem_post(&mutex);
+   return (NULL);
+}
 
-int main() { 
-sem_init(&mutex,0,1); 
-static int i;
+int main()
+{
+   sem_init(&mutex, 0, 1);
+   static int i;
 
-for (i = 0; i < NTHREADS; i++)  
-   pthread_create(&threads[i], NULL, go, (void *)(size_t)i); 
-for (i = 0; i < NTHREADS; i++) {
-   pthread_join(threads[i],NULL);
-   printf("Thread %d returned \n", i);
+   for (i = 0; i < NTHREADS; i++)
+      pthread_create(&threads[i], NULL, go, (void *)(size_t)i);
+
+   for (i = 0; i < NTHREADS; i++)
+   {
+      pthread_join(threads[i], NULL);
+      printf("Thread %d returned \n", i);
    }
-printf("Main thread done.\n");
-sem_destroy(&mutex); 
-return 0; 
-} 
+
+   printf("Main thread done.\n");
+   sem_destroy(&mutex);
+
+   return 0;
+}

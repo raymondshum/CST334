@@ -1,0 +1,173 @@
+****** Test Run with Buffer Size 26 ****** 
+Contents of Letter Array: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Producer thread 1:: a >> buffer
+Producer thread 1:: b >> buffer
+Producer thread 1:: c >> buffer
+Producer thread 1:: d >> buffer
+Producer thread 1:: e >> buffer
+Producer thread 1:: f >> buffer
+Producer thread 1:: g >> buffer
+Producer thread 1:: h >> buffer
+Producer thread 1:: i >> buffer
+Producer thread 1:: j >> buffer
+Producer thread 1:: k >> buffer
+Producer thread 1:: l >> buffer
+Producer thread 1:: m >> buffer
+Producer thread 1:: n >> buffer
+Producer thread 1:: o >> buffer
+Producer thread 1:: p >> buffer
+Producer thread 1:: q >> buffer
+Producer thread 1:: r >> buffer
+Producer thread 1:: s >> buffer
+Producer thread 1:: t >> buffer
+Producer thread 1:: u >> buffer
+Producer thread 1:: v >> buffer
+Producer thread 1:: w >> buffer
+Producer thread 1:: x >> buffer
+Producer thread 1:: y >> buffer
+Producer thread 1:: z >> buffer
+Producer thread 1:: Ended
+Consumer thread 2:: buffer >> a
+Consumer thread 2:: buffer >> b
+Consumer thread 2:: buffer >> c
+Consumer thread 2:: buffer >> d
+Consumer thread 2:: buffer >> e
+Consumer thread 2:: buffer >> f
+Consumer thread 2:: buffer >> g
+Consumer thread 2:: buffer >> h
+Consumer thread 2:: buffer >> i
+Consumer thread 2:: buffer >> j
+Consumer thread 2:: buffer >> k
+Consumer thread 2:: buffer >> l
+Consumer thread 2:: buffer >> m
+Consumer thread 2:: buffer >> n
+Consumer thread 2:: buffer >> o
+Consumer thread 2:: buffer >> p
+Consumer thread 2:: buffer >> q
+Consumer thread 2:: buffer >> r
+Consumer thread 2:: buffer >> s
+Consumer thread 2:: buffer >> t
+Consumer thread 2:: buffer >> u
+Consumer thread 2:: buffer >> v
+Consumer thread 2:: buffer >> w
+Consumer thread 2:: buffer >> x
+Consumer thread 2:: buffer >> y
+Consumer thread 2:: buffer >> z
+Consumer thread 2:: Ended
+Program Completed.
+
+****** Test Run with Buffer Size 5 ******
+Contents of Letter Array: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Producer thread 1:: a >> buffer
+Producer thread 1:: b >> buffer
+Producer thread 1:: c >> buffer
+Producer thread 1:: d >> buffer
+Producer thread 1:: e >> buffer
+Consumer thread 2:: buffer >> a
+Consumer thread 2:: buffer >> b
+Consumer thread 2:: buffer >> c
+Consumer thread 2:: buffer >> d
+Producer thread 1:: f >> buffer
+Consumer thread 2:: buffer >> e
+Producer thread 1:: g >> buffer
+Consumer thread 2:: buffer >> f
+Producer thread 1:: h >> buffer
+Consumer thread 2:: buffer >> g
+Producer thread 1:: i >> buffer
+Consumer thread 2:: buffer >> h
+Producer thread 1:: j >> buffer
+Consumer thread 2:: buffer >> i
+Producer thread 1:: k >> buffer
+Consumer thread 2:: buffer >> j
+Producer thread 1:: l >> buffer
+Consumer thread 2:: buffer >> k
+Producer thread 1:: m >> buffer
+Consumer thread 2:: buffer >> l
+Producer thread 1:: n >> buffer
+Consumer thread 2:: buffer >> m
+Producer thread 1:: o >> buffer
+Consumer thread 2:: buffer >> n
+Producer thread 1:: p >> buffer
+Consumer thread 2:: buffer >> o
+Producer thread 1:: q >> buffer
+Consumer thread 2:: buffer >> p
+Producer thread 1:: r >> buffer
+Consumer thread 2:: buffer >> q
+Producer thread 1:: s >> buffer
+Consumer thread 2:: buffer >> r
+Producer thread 1:: t >> buffer
+Consumer thread 2:: buffer >> s
+Producer thread 1:: u >> buffer
+Consumer thread 2:: buffer >> t
+Producer thread 1:: v >> buffer
+Consumer thread 2:: buffer >> u
+Producer thread 1:: w >> buffer
+Consumer thread 2:: buffer >> v
+Producer thread 1:: x >> buffer
+Consumer thread 2:: buffer >> w
+Producer thread 1:: y >> buffer
+Consumer thread 2:: buffer >> x
+Producer thread 1:: z >> buffer
+Producer thread 1:: Ended
+Consumer thread 2:: buffer >> y
+Consumer thread 2:: buffer >> z
+Consumer thread 2:: Ended
+Program Completed.
+
+****** Test Run with Buffer Size 1 ******
+Contents of Letter Array: a b c d e f g h i j k l m n o p q r s t u v w x y z 
+Producer thread 1:: a >> buffer
+Consumer thread 2:: buffer >> a
+Producer thread 1:: b >> buffer
+Consumer thread 2:: buffer >> b
+Producer thread 1:: c >> buffer
+Consumer thread 2:: buffer >> c
+Producer thread 1:: d >> buffer
+Consumer thread 2:: buffer >> d
+Producer thread 1:: e >> buffer
+Consumer thread 2:: buffer >> e
+Producer thread 1:: f >> buffer
+Consumer thread 2:: buffer >> f
+Producer thread 1:: g >> buffer
+Consumer thread 2:: buffer >> g
+Producer thread 1:: h >> buffer
+Consumer thread 2:: buffer >> h
+Producer thread 1:: i >> buffer
+Consumer thread 2:: buffer >> i
+Producer thread 1:: j >> buffer
+Consumer thread 2:: buffer >> j
+Producer thread 1:: k >> buffer
+Consumer thread 2:: buffer >> k
+Producer thread 1:: l >> buffer
+Consumer thread 2:: buffer >> l
+Producer thread 1:: m >> buffer
+Consumer thread 2:: buffer >> m
+Producer thread 1:: n >> buffer
+Consumer thread 2:: buffer >> n
+Producer thread 1:: o >> buffer
+Consumer thread 2:: buffer >> o
+Producer thread 1:: p >> buffer
+Consumer thread 2:: buffer >> p
+Producer thread 1:: q >> buffer
+Consumer thread 2:: buffer >> q
+Producer thread 1:: r >> buffer
+Consumer thread 2:: buffer >> r
+Producer thread 1:: s >> buffer
+Consumer thread 2:: buffer >> s
+Producer thread 1:: t >> buffer
+Consumer thread 2:: buffer >> t
+Producer thread 1:: u >> buffer
+Consumer thread 2:: buffer >> u
+Producer thread 1:: v >> buffer
+Consumer thread 2:: buffer >> v
+Producer thread 1:: w >> buffer
+Consumer thread 2:: buffer >> w
+Producer thread 1:: x >> buffer
+Consumer thread 2:: buffer >> x
+Producer thread 1:: y >> buffer
+Consumer thread 2:: buffer >> y
+Producer thread 1:: z >> buffer
+Producer thread 1:: Ended
+Consumer thread 2:: buffer >> z
+Consumer thread 2:: Ended
+Program Completed.

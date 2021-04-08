@@ -4,7 +4,7 @@
 #include <semaphore.h> 
 
 # define PRO_THREAD 1
-# define CON_THREAD 1
+# define CON_THREAD 10
 # define ALPHABET 26
 # define ANSI_VALUE 97
 # define BUFFER 1
@@ -19,6 +19,7 @@ char buffer[BUFFER];
 static int position = 0;
 static int fill = 0;
 static int use = 0;
+static char sentinel = ' ';
 
 void initLetter();
 void initResults();
@@ -98,10 +99,15 @@ void *producer(void *arg){
 }
 
 void *consumer(void *arg){
-    char sentinel = ' ';
-
     do {
-        sem_wait(&full);
+        while(sem_trywait(&full) != 0)
+        {
+            if(sentinel == 'z') 
+            {
+                printf("Consumer thread %d:: Ended (Sentinel)\n", (int)pthread_self());
+                return (NULL);
+            }
+        }
         sem_wait(&mutex);
         sentinel = get();   
         sem_post(&mutex);
