@@ -84,13 +84,13 @@ void printArray(char arg[]){
 
 void *producer(void *arg){
 
-    while(position < ALPHABET) {
+    do {
         sem_wait(&empty);
         sem_wait(&mutex);
         put(letter[position++]);
         sem_post(&mutex);
         sem_post(&full);
-    }
+    } while(position < ALPHABET);
 
     printf("Producer thread %d:: Ended\n", (int)pthread_self());
 
@@ -98,14 +98,15 @@ void *producer(void *arg){
 }
 
 void *consumer(void *arg){
+    char sentinel = ' ';
 
-    while (position < ALPHABET) {
+    do {
         sem_wait(&full);
         sem_wait(&mutex);
-        get();
+        sentinel = get();   
         sem_post(&mutex);
         sem_post(&empty);
-    }
+    } while(sentinel < 'z');
 
     printf("Consumer thread %d:: Ended\n", (int)pthread_self());
 
