@@ -13,6 +13,10 @@ Description taken from student course catalog. Students in this course will lear
 
 [Module 4](#module-4)
 
+[Module 5](#module-5)
+
+[Module 6](#module-6)
+
 ## Lab Descriptions
 These projects are the primary deliverables associated with the CSUMB's Spring 2021 section of CST 334. They are assigned 1 per week (as modules) and meant to be the practical demonstration of the core competencies of that week's course materials.
 
@@ -51,5 +55,25 @@ This program is meant to be a simulation of a FIFO page replacement algorithm us
 If the cache is either empty or not full and the page is not found, then the page is added to the end of the list and a page fault counter is incremented. If the page is not found and the cache is full, then the head of the linked list (oldest entry) is dequeued. The new page is subsequently enqueued at the end as the newest entry. If the page is found, then the hit counter is incremented and the linked list is not changed.
 
 The write-up (analysis of results) is present as a .pdf file in the Module4 folder.
+
+[Return to Top](#contents)
+
+### Module 5
+
+This lab has two parts:
+
+Part 1: We demonstrate the effect that unsynchronized and uncontrolled access to a stack-allocated variable can have on a multi-threaded program & we implement a fix by assigning the current value of the variable to a heap-allocated address per thread created.
+
+Part 2: We implement a multi-threaded solution to perform matrix calculations on 1024 x 1024 matrices.
+
+[Return to Top](#contents)
+
+### Module 6
+
+This lab has two parts:
+
+Part 1: We observe the use of semaphores to control access to a critical section in a multithreaded envrionment.
+
+Part 2: We implement a solution to the producer-consumer bounded buffer problem through the use of semaphores.
 
 [Return to Top](#contents)
