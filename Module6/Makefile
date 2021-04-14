@@ -11,14 +11,14 @@ CC = g++
 
 CFLAGS = -D DEBUG -Wall -pthread
 
-all: threadSyn.o lab6.o
+all: threadSync.o lab6.o
 
-threadSyn.o : threadSyn.c
-	gcc $(CFLAGS) -o threadSyn.o threadSyn.c 
+threadSync.o : threadSync.c
+	gcc $(CFLAGS) -o threadSync.o threadSync.c 
 
 lab6.o : lab6.c
 	gcc $(CFLAGS) -o lab6.o lab6.c 
 
 
 clean:
-	rm -f threadSyn.o lab6.o
+	rm -f threadSync.o lab6.o
