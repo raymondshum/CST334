@@ -1,4 +1,4 @@
-# Lab 2 - Inter-process Communication – Pipes
+# Lab 3 - Inter-process Communication – Pipes
 
 ---
 
