@@ -14,10 +14,10 @@ This repository contains my coursework for CST334. Descriptions for each module 
 
 ---
 
-### _[Module 1: Shell Scripting]()_
-### _[Module 2: Process Execution]()_
-### _[Module 3: Inter-process Communication – Pipes]()_
-### _[Module 4: Memory Management]()_
-### _[Module 5: Developing multi-threaded applications]()_
-### _[Module 6: Synchronization using semaphores]()_
+### _[Module 1: Shell Scripting](https://github.com/raymondshum/CST334/tree/main/Module1)_
+### _[Module 2: Process Execution](https://github.com/raymondshum/CST334/tree/main/Module2)_
+### _[Module 3: Inter-process Communication – Pipes](https://github.com/raymondshum/CST334/tree/main/Module3)_
+### _[Module 4: Memory Management](https://github.com/raymondshum/CST334/tree/main/Module4)_
+### _[Module 5: Developing multi-threaded applications](https://github.com/raymondshum/CST334/tree/main/Module5)_
+### _[Module 6: Synchronization using semaphores](https://github.com/raymondshum/CST334/tree/main/Module6)_
 
